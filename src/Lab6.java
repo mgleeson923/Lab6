@@ -36,6 +36,10 @@ public class Lab6 {
             //6. Prompt to run again
             System.out.print("Would you like to translate another word? Y/N: ");
             repeat = scnr.nextLine();
+            while (!repeat.equalsIgnoreCase("Y") && (!repeat.equalsIgnoreCase("N"))) {
+                System.out.print("Invalid input. Would you like to translate another word? Y/N: ");
+                repeat = scnr.nextLine();
+            }
 
         } while (repeat.equalsIgnoreCase("Y"));
         System.out.println("Thanks for playing. Good bye!");
